@@ -1,5 +1,5 @@
 # CRISP-DM Cross-Indastry Standart Proces for Data Mining или Межотраслевой стандартный процесс интелектуального анализа данных.
-![Каритинка](https://github.com/CherniySN/Machine-learning-process-CRISP-DM/blob/main/CRISP-DM_Process_Diagram%20(1).png)
+![Каритинка](https://github.com/CherniySN/Machine-Learning/blob/main/picture_for_README/CRISP-DM_Process_Diagram%20(1).png)
 
 Согласно CRISP-DM (указан выше на рисунке) машинное обучение состоит из шести этапов:
 1. Бизнес-анализ
@@ -16,37 +16,37 @@
 - На этапе моделирования мы обуаем модель;
 - После оцениваем лучшую модель и оцениваем ее успешность в решении поставленной задачи;
 - Этап развертывания - развертывание модели в продакшене.
-![Каритинка](![Методологи по пунктам](https://github.com/CherniySN/Machine-learning-process-CRISP-DM/blob/main/CRISP%20-%20DM.jpg)
+![Каритинка](![Методологи по пунктам](https://github.com/CherniySN/Machine-Learning/blob/main/picture_for_README/CRISP%20-%20DM.jpg)
 
 # Моделирование и выбор модели.
 Онлайн-тестирование - это развертывание модели и оценка качества на реальных данных.
 
 В процесси моделирования мы можем сэмитировать запуск модеи и проверки ее, разделив коллекцию данных на обучающую и проверочну.
-(![Картинка](https://github.com/CherniySN/Machine-learning-process-CRISP-DM/blob/main/%D0%94%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85.jpg)
+(![Картинка](https://github.com/CherniySN/Machine-Learning/blob/main/picture_for_README/%D0%94%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85.jpg)
 
 Как видно из картинки мы взяли 90% для обчение и 10% для проверки модели. 
 
 И так мы предпологаем, что данную задачу хорошо решает линейная регрессия и нейронная сеть и нам теперь стоит определить, какая из них лучше решает задачу на наших данных.
-![Картинка](https://github.com/CherniySN/Machine-learning-process-CRISP-DM/blob/main/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85.jpg)
+![Картинка](https://github.com/CherniySN/Machine-Learning/blob/main/picture_for_README/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85.jpg)
 
 Но стоит помнить, что у нейронных сетей есть свои параметры, которыми мы можем ее настраивать, так же и у линей регрессии есть свои параметры. Обучим несколько вариантов моделей с разными параметрами и посмотрим на результат.
-![Картинка](https://github.com/CherniySN/Machine-learning-process-CRISP-DM/blob/main/%D0%92%D1%8B%D0%B1%D0%BE%D1%80%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%B2%20%D0%B8%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5.jpg)
+![Картинка](https://github.com/CherniySN/Machine-Learning/blob/main/picture_for_README/%D0%92%D1%8B%D0%B1%D0%BE%D1%80%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%B2%20%D0%B8%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5.jpg)
 
 #### ВНИМАНИЕ!!!
 Если мы раз за разом проводим оценку модели на проверочных данных, то высокая точность модели может оказаться случацностью! Т.е. нам просто может повезти с результатами.
 В статистике эта проблема называется -"Проблема множественных сравнений". Чем больше раз мы оцениваем точность нашей модели тем больше вероятность того. что мы случайно увидим хорошую производительность.
 #### РЕШЕНИЕ!!!
 Что бы этого избежать мы поделим наши данные еще раз. Тепрь 80% - для обучения, 10% - проверочные данные, 10% - тестовые данные.
-![Картинка](https://github.com/CherniySN/Machine-learning-process-CRISP-DM/blob/main/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B9%20%D1%87%D0%B0%D1%82%D0%B8.jpg)
+![Картинка](https://github.com/CherniySN/Machine-Learning/blob/main/picture_for_README/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B9%20%D1%87%D0%B0%D1%82%D0%B8.jpg)
 
 Дале мы проводим обучение, оцениваем работу моделей на проверочном наборе данных и ВЫБРАВ ЛУЧШУЮ МЫ ОЦЕНИМ ЕЕ НА ТЕСТОВОМ НАБОРЕ ДАННЫХ.
-![Картинка](https://github.com/CherniySN/Machine-learning-process-CRISP-DM/blob/main/%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%B9%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8.jpg)
+![Картинка](https://github.com/CherniySN/Machine-Learning/blob/main/picture_for_README/%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%B9%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8.jpg)
 
 Процесс выбора лучшей модели:
 1. Делим данные на обучающую выборку, проверочную выборку и тестовую выборку.
 2. Обучаем каждую модель на обучающей части и затем проверяем на проверочной.
 3. Определяем лучшую модель и тестируем ее на тестовой выборке.
-![Картинка](https://github.com/CherniySN/Machine-learning-process-CRISP-DM/blob/main/%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%20%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%B0%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8.jpg)
+![Картинка](https://github.com/CherniySN/Machine-Learning/blob/main/picture_for_README/%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%20%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%B0%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8.jpg)
 Важно использовать этот процесс пока не найдем лучшую модель, убедившись что модель пригодна мы переходим к следующему шагу - развертывание.
 
 # Задача линейной регрессии. Прогнозирование цены квартиры.
